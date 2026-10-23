@@ -31,82 +31,98 @@ connections: [mau-thuyet-minh-its, vi-du-tinh-tong-muc-dau-tu-its, dinh-muc-chi-
 ## 1.1. Chỉ tiêu kỹ thuật chi tiết theo từng hạng mục
 
 ### A. CCTV / Camera giám sát giao thông (AI)
-**Tiêu chuẩn tham chiếu**: TCVN 14464-1:2025, QCVN 05:2024/BCA, QCVN 11:2026/BCA hoặc QCVN 135:2024/BTTTT.
+**Tiêu chuẩn tham chiếu**: TCVN 14464-1:2025 (Phần 1: Thiết bị giám sát), QCVN 05:2024/BCA, QCVN 11:2026/BCA hoặc QCVN 135:2024/BTTTT (an ninh mạng camera IP).
 
 | Chỉ tiêu | Yêu cầu kỹ thuật tối thiểu |
 |----------|----------------------------|
 | Độ phân giải | ≥ 4MP (khuyến nghị 4K / 8MP) |
 | Tầm nhìn đêm | IR ≥ 50–80 m hoặc Full Color |
-| Chức năng AI | ANPR (≥ 93% ban ngày / ≥ 80% ban đêm), phân loại phương tiện, phát hiện sự cố |
+| Chức năng AI | ANPR (nhận diện biển số ≥ 93% ban ngày / ≥ 80% ban đêm), phân loại phương tiện, phát hiện sự cố (xe dừng, ngược chiều, vật rơi, đi sai làn) |
 | Phạm vi giám sát | ≥ 2 làn xe |
 | Chuẩn nén | H.265 / H.265+ |
-| Chống chịu | IP66/IP67, IK08 hoặc cao hơn |
-| An toàn thông tin | Tuân thủ yêu cầu an ninh mạng cơ bản |
-| Kết nối | ONVIF Profile S/T/G |
+| Chống chịu | IP66/IP67, IK08 hoặc cao hơn, nhiệt độ -10°C ~ +50°C |
+| An toàn thông tin | Tuân thủ yêu cầu an ninh mạng cơ bản (mật khẩu mạnh, cập nhật firmware, mã hóa kênh) |
+| Kết nối | ONVIF Profile S/T/G, PoE hoặc nguồn riêng + UPS |
+| Tốc độ khung hình | ≥ 25 fps |
+| WDR | ≥ 120 dB (khuyến nghị) |
+| Zoom quang (PTZ) | ≥ 20–30x |
+| Lưu trữ tại biên | Hỗ trợ SD/edge storage khi mất kết nối |
 
-### B. VDS – Hệ thống đo đếm lưu lượng & tốc độ
-**Tiêu chuẩn tham chiếu**: TCVN 10850:2015, ISO/TC 204.
+### B. VDS – Hệ thống đo đếm lưu lượng & tốc độ phương tiện
+**Tiêu chuẩn tham chiếu**: TCVN 10850:2015, hướng dẫn Cục Đường bộ / tiêu chuẩn quốc tế ISO/TC 204.
 
 | Chỉ tiêu | Yêu cầu kỹ thuật tối thiểu |
 |----------|----------------------------|
-| Công nghệ | Radar Doppler hoặc camera AI đếm xe |
+| Công nghệ | Radar Doppler, vòng từ, hoặc camera AI đếm xe |
 | Phạm vi | ≥ 2–4 làn |
 | Độ chính xác | Đếm xe ≥ 95%; đo tốc độ sai số ≤ ±3–5% |
-| Dữ liệu xuất | Lưu lượng theo làn, tốc độ, phân loại xe |
+| Dữ liệu xuất | Lưu lượng theo làn, tốc độ trung bình/cao nhất, phân loại xe |
+| Môi trường | Hoạt động ổn định trong mưa, sương mù, ban đêm |
+| Kết nối | Ethernet, RS485 hoặc không dây; hỗ trợ giao thức mở |
 
 ### C. VMS – Biển báo thông tin điện tử
 **Tiêu chuẩn tham chiếu**: TCVN 10850:2015.
 
 | Chỉ tiêu | Yêu cầu kỹ thuật tối thiểu |
 |----------|----------------------------|
-| Loại | Full matrix LED |
-| Độ sáng | ≥ 8.000–10.000 cd/m² |
+| Loại | Full matrix LED hoặc hybrid |
+| Độ sáng | ≥ 8.000–10.000 cd/m² (điều chỉnh tự động) |
 | Khoảng cách nhìn | ≥ 200–300 m |
-| Điều khiển | Từ trung tâm TMC; chế độ an toàn khi mất kết nối |
+| Nội dung hiển thị | Văn bản, biểu tượng, cảnh báo ùn tắc/sự cố, tốc độ khuyến cáo |
+| Chống chịu | IP65 trở lên, chịu gió ≥ 40 m/s |
+| Điều khiển | Từ trung tâm (TMC) qua giao thức mở; chế độ an toàn khi mất kết nối |
 
 ### H. WIM – Hệ thống cân tải trọng xe động
 **Tiêu chuẩn tham chiếu**: QCVN 116:2024/BGTVT, ASTM E1318, OIML R134.
 
 | Chỉ tiêu | Yêu cầu kỹ thuật tối thiểu |
 |----------|----------------------------|
-| Loại | HS WIM hoặc LS WIM |
+| Loại | High-Speed WIM (HS WIM) hoặc Low-Speed WIM (LS WIM) |
 | Phạm vi tốc độ | 3–120 km/h |
-| Độ chính xác | ≥ 93–95% theo quy định |
-| Chức năng | Đo tải trọng trục, tổng trọng lượng, phân loại xe, nhận diện biển số |
+| Độ chính xác | Đo tải trọng trục / tổng trọng lượng đạt cấp chính xác theo quy định (≥ 93–95%) |
+| Chức năng | Đo tải trọng từng trục, cụm trục, tổng trọng lượng xe; phân loại xe; nhận diện biển số; phát hiện quá tải |
+| Tích hợp | Camera ANPR, VMS cảnh báo, kết nối dữ liệu về trung tâm |
 
 ### I. LCS – Biển kiểm soát làn đường
 **Tiêu chuẩn tham chiếu**: TCVN 10850:2015.
 
 | Chỉ tiêu | Yêu cầu kỹ thuật tối thiểu |
 |----------|----------------------------|
-| Loại | Biển LED matrix |
-| Chức năng | Chỉ dẫn làn mở/đóng, cảnh báo sự cố |
-| Điều khiển | Từ TMC theo thời gian thực |
+| Loại | Biển LED matrix hiển thị mũi tên, X, số làn mở/đóng |
+| Chức năng | Chỉ dẫn làn mở/đóng, cảnh báo sự cố, hướng dẫn chuyển làn |
+| Điều khiển | Từ trung tâm TMC theo thời gian thực; chế độ an toàn mặc định |
 
-### J. Barrier – Cần chắn tự động
+### J. Barrier – Cần chắn / Barrier tự động
 | Chỉ tiêu | Yêu cầu kỹ thuật tối thiểu |
 |----------|----------------------------|
+| Loại | Barrier tự động điều khiển từ xa |
 | Thời gian đóng/mở | ≤ 3–5 giây |
-| An toàn | Cảm biến chống kẹt, dừng khẩn cấp |
+| An toàn | Cảm biến chống kẹt, dừng khẩn cấp, báo hiệu đèn + còi |
 
 ### K. Hệ thống kỹ thuật trong hầm (nếu có)
-**Tiêu chuẩn tham chiếu**: TCVN 4527:1988.
+**Tiêu chuẩn tham chiếu**: TCVN 4527:1988, quy định an toàn hầm, PCCC.
 
 | Chỉ tiêu | Yêu cầu kỹ thuật tối thiểu |
 |----------|----------------------------|
-| Camera | Chống ẩm, khói, độ phân giải cao |
-| Cảm biến | Khói, CO, nhiệt độ |
-| Thông gió | Quạt điều khiển tự động |
+| Camera giám sát | Camera cố định + PTZ, chống ẩm, khói |
+| Cảm biến | Khói, CO, nhiệt độ, lưu lượng không khí |
+| Thông gió | Quạt thông gió điều khiển tự động |
+| Chiếu sáng | Chiếu sáng thích ứng, đèn sự cố |
 
 ### L. ATM – Hệ thống quản lý giao thông nâng cao
 **Tiêu chuẩn tham chiếu**: TCVN 10850:2015.
 
 | Chỉ tiêu | Yêu cầu kỹ thuật tối thiểu |
 |----------|----------------------------|
-| Chức năng | Thu thập dữ liệu đa nguồn, xử lý real-time, điều khiển thiết bị |
-| Tích hợp | API mở với ETC, WIM, hệ thống cấp trên |
+| Chức năng chính | Thu thập dữ liệu đa nguồn, xử lý real-time, điều khiển thiết bị (VMS, LCS, Barrier) |
+| Tích hợp | API mở với các hệ thống khác (ETC, WIM, hệ thống cấp trên) |
+| Giao diện vận hành | Dashboard thời gian thực, bản đồ số, cảnh báo tự động |
 
-**Lưu ý**: Các chỉ tiêu trên là mức tối thiểu khuyến nghị. Khi lập hồ sơ chính thức phải liệt kê đầy đủ QCVN/TCVN áp dụng.
+**Lưu ý quan trọng**:
+- Các chỉ tiêu trên là mức **tối thiểu khuyến nghị** dựa trên tiêu chuẩn hiện hành.
+- Khi lập hồ sơ chính thức phải liệt kê đầy đủ QCVN/TCVN áp dụng.
+- Đối với WIM: phải tuân thủ QCVN 116:2024/BGTVT.
+- An ninh mạng camera phải được xem xét kỹ.
 
 ---
 
@@ -114,21 +130,26 @@ connections: [mau-thuyet-minh-its, vi-du-tinh-tong-muc-dau-tu-its, dinh-muc-chi-
 
 | Khoản mục | Số tiền (triệu đồng) |
 |-----------|----------------------|
-| Chi phí xây dựng | 4.200 |
-| Chi phí thiết bị | 11.800 |
+| Chi phí xây dựng (móng trụ, lắp đặt, điện, bảo vệ) | 4.200 |
+| Chi phí thiết bị (camera AI, VDS, truyền dẫn, phần mềm) | 11.800 |
 | Chi phí quản lý dự án | 520 |
-| Chi phí tư vấn | 780 |
+| Chi phí tư vấn (lập BCKTKT + thiết kế BVTC + khảo sát) | 780 |
 | Chi phí khác | 300 |
 | Dự phòng | 900 |
 | **Tổng mức đầu tư** | **18.500** |
+
+**Chi phí xây dựng + thiết bị** = 16.000 triệu đồng.
 
 ---
 
 ## 3. Tính chi phí lập Báo cáo kinh tế kỹ thuật
 
 Theo Bảng 2.4 Thông tư 38/2026/TT-BXD – Công trình giao thông:
+- Mốc 15 tỷ: 2,9%
+- Mốc 20 tỷ: 2,7%
 - Chi phí XD + TB = 16 tỷ → nội suy ≈ **2,82%**
-- **Chi phí lập BCKTKT** ≈ **451 triệu đồng** (chưa VAT).
+
+**Chi phí lập BCKTKT** ≈ 2,82% × 16 tỷ = **≈ 451 triệu đồng** (chưa VAT).
 
 ---
 
@@ -136,9 +157,9 @@ Theo Bảng 2.4 Thông tư 38/2026/TT-BXD – Công trình giao thông:
 
 | Giai đoạn | Thời gian |
 |-----------|-----------|
-| Chuẩn bị, khảo sát, lập BCKTKT | 2–3 tháng |
+| Chuẩn bị, khảo sát, lập BCKTKT & thiết kế | 2–3 tháng |
 | Thi công lắp đặt | 4–5 tháng |
-| Nghiệm thu, bàn giao | 1 tháng |
+| Kiểm tra, nghiệm thu, bàn giao vận hành | 1 tháng |
 | **Tổng thời gian** | **7–9 tháng** |
 
 ---
@@ -146,8 +167,20 @@ Theo Bảng 2.4 Thông tư 38/2026/TT-BXD – Công trình giao thông:
 ## 5. Hiệu quả kỳ vọng
 
 - Giám sát liên tục 24/7, phát hiện sự cố nhanh hơn 30–50%.
-- Cung cấp dữ liệu lưu lượng, tốc độ phục vụ quản lý.
-- Hỗ trợ giảm tai nạn, ùn tắc.
+- Cung cấp dữ liệu lưu lượng, tốc độ phục vụ quản lý và dự báo.
+- Hỗ trợ giảm tai nạn, ùn tắc trên đoạn tuyến.
+- Kết nối dữ liệu với trung tâm điều hành cấp trên / ETC / WIM (nếu có).
+
+---
+
+## 6. Các điểm cần lưu ý khi áp dụng mẫu này
+
+- Số liệu trên là **uớc tính minh họa**.
+- Phải điều chỉnh theo đơn giá, định mức, khối lượng khảo sát thực tế.
+- Đồng bộ thuyết minh – thiết kế bản vẽ thi công – dự toán.
+- Kiểm tra lại hạn mức ≤ 40 tỷ (không gồm đất) trước khi trình.
+
+**Cách sử dụng**: Copy cấu trúc này vào thuyết minh chính, điền thông tin tuyến cụ thể, và tính toán lại chi phí bằng phần mềm dự toán.
 
 ---
 
