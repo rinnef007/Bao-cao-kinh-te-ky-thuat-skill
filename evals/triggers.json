@@ -1,0 +1,13 @@
+{
+  "skill": "bao-cao-kinh-te-ky-thuat",
+  "test_cases": [
+    {
+      "input": "Lập báo cáo kinh tế kỹ thuật cho dự án xây dựng",
+      "should_trigger": true
+    },
+    {
+      "input": "Hướng dẫn soạn thuyết minh BCKTKT theo nghị định mới",
+      "should_trigger": true
+    }
+  ]
+}

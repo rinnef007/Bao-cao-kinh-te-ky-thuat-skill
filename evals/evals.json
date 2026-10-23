@@ -1,0 +1,10 @@
+{
+  "skill": "bao-cao-kinh-te-ky-thuat",
+  "test_cases": [
+    {
+      "name": "xac_dinh_dieu_kien",
+      "input": "Dự án xây dựng nhà xưởng tổng mức đầu tư 35 tỷ có cần lập BCKTKT không?",
+      "assertions": ["Xác định đúng thuộc trường hợp chỉ cần lập BCKTKT vì ≤40 tỷ"]
+    }
+  ]
+}
